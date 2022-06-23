@@ -1,12 +1,19 @@
-Snake s;
+Snake sneck;
+Food Pellet;
 
 
 void setup(){
-  size(400, 400);
-  s = new Snake();
+size(400,400);
+background (0,0,0);
+sneck=new Snake();
+Pellet=new Food();
 }
 
 void draw(){
-  fill(0, 0, 0);
-  rect(200, 200, 10, 10);
+sneck.moveSnake();
+sneck.drawSnake();
+sneck.changeDirection(keyCode);
+Pellet.drawFood();
+
+
 }
